@@ -1,0 +1,246 @@
+{
+  "heart_sounds": [
+    {
+      "problem_number": 1,
+      "sound_name": "Normal",
+      "sound_description": "립덥 럽덥 럽럽럽럽 럽덥 근데 중간에 찻찻 챠챠 찻찻 소리 같이 남. 수업 시간에 들었던 normal 소리. 럽덥 럽던 하다가 중간에 숨 쉬는 것 때문인지 뭐 쓸리는 소리나는 것까지. ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 2,
+      "sound_name": "Paradoxical S2 split during inspiration and expiration",
+      "sound_description": "Paradoxical은 럽 더덥럽 더덥럽 더덥 하다가 중간에 찻찻찻찻 찻찻 찻찻. S2 split during inspiration and expiration. 럽럽럽럽 럽럽럽럽럽럽 럽더덥 럽더덥 럽더덥. 수업 시간에 들었던 그 소리. 럽덤 럽던 하다가 럽 더덤~럽 더덤~persistent 같은 경우에는 계속 럽 더덥 하네. Wide fixed 같은 경우에 같은 음으로 럽 더덥 한다. 처음부터 계속 럽더덥/럽더덥/럽더덥. 얘는 음에 변화 없이 럽 더딥/럽더덥/럽더덥.",
+      "audio_file_number": 11
+    },
+    {
+      "problem_number": 3,
+      "sound_name": "Paradoxical S2 split during inspiration and expiration",
+      "sound_description": "Paradoxical은 럽 더덥럽 더덥럽 더덥 하다가 중간에 찻찻찻찻 찻찻 찻찻. S2 split during inspiration and expiration. 럽럽럽럽 럽럽럽럽럽럽 럽더덥 럽더덥 럽더덥. 수업 시간에 들었던 그 소리. 럽덤 럽던 하다가 럽 더덤~럽 더덤~persistent 같은 경우에는 계속 럽 더덥 하네. Wide fixed 같은 경우에 같은 음으로 럽 더덥 한다. 처음부터 계속 럽더덥/럽더덥/럽더덥. 얘는 음에 변화 없이 럽 더딥/럽더덥/럽더덥.",
+      "audio_file_number": 11
+    },
+    {
+      "problem_number": 4,
+      "sound_name": "Paradoxical S2 split during inspiration and expiration",
+      "sound_description": "Paradoxical은 럽 더덥럽 더덥럽 더덥 하다가 중간에 찻찻찻찻 찻찻 찻찻. S2 split during inspiration and expiration. 럽럽럽럽 럽럽럽럽럽럽 럽더덥 럽더덥 럽더덥. 수업 시간에 들었던 그 소리. 럽덤 럽던 하다가 럽 더덤~럽 더덤~persistent 같은 경우에는 계속 럽 더덥 하네. Wide fixed 같은 경우에 같은 음으로 럽 더덥 한다. 처음부터 계속 럽더덥/럽더덥/럽더덥. 얘는 음에 변화 없이 럽 더딥/럽더덥/럽더덥.",
+      "audio_file_number": 11
+    },
+    {
+      "problem_number": 5,
+      "sound_name": "Paradoxical S2 split during inspiration and expiration",
+      "sound_description": "Paradoxical은 럽 더덥럽 더덥럽 더덥 하다가 중간에 찻찻찻찻 찻찻 찻찻. S2 split during inspiration and expiration. 럽럽럽럽 럽럽럽럽럽럽 럽더덥 럽더덥 럽더덥. 수업 시간에 들었던 그 소리. 럽덤 럽던 하다가 럽 더덤~럽 더덤~persistent 같은 경우에는 계속 럽 더덥 하네. Wide fixed 같은 경우에 같은 음으로 럽 더덥 한다. 처음부터 계속 럽더덥/럽더덥/럽더덥. 얘는 음에 변화 없이 럽 더딥/럽더덥/럽더덥.",
+      "audio_file_number": 11
+    },
+    {
+      "problem_number": 6,
+      "sound_name": "Over Mitral area S1 S2 S3",
+      "sound_description": "두웃두 샷/ 두웃두샷/두웃두샷/두웃두 샷. 이것도 럽 더덤~ 하는데 S2 split이 더덥이 같은 음이고 빠른 더덥이면 이건 좀 느린 더덥에 음이 낮아짐. ",
+      "audio_file_number": 22
+    },
+    {
+      "problem_number": 7,
+      "sound_name": "S4 S4 S1 S2",
+      "sound_description": "러럽 덥/러럽덥/러럽덥/러럽 덥. 앞에 약간 바람소리 같은 거 나면서 러럽 덥 러럽 덥 느낌. 찬디밥은 소리.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 28,
+      "sound_name": "Summation Gallop",
+      "sound_description": "다두따 다두따 다두따 다두따 다두따 다두따. 뭐 왜 이렇게 다급하세요 사람 두들겨 패세요? 러러럽 러러럽 러러럽 러러럽 러러럽.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": "이번",
+      "sound_name": "Opening snap of Mitral valve",
+      "sound_description": "뚜듯 뜻/뚜듯 뜻/뚜듯 뜻/뚜듯 뜻. 첨에 챠 소리 남. 좀 신난 사람의 발소리 같음. 일단 높은 소리고 빠르고 경쾌하게 러럽 덥! 러럽 덥! 하는데 S4와의 차이점은 !  이 약간 더 높고 경쾌하고 바람 뽁! 느낌 남.",
+      "audio_file_number": "21, 23"
+    },
+    {
+      "problem_number": 10,
+      "sound_name": "Aortic Ejection",
+      "sound_description": "부앚 붓/부왓붓/부왓붓/부왓붓/부왓붓 부왓은 얼핏 들으면 한소리 같음. '러럽 덥'의 느낌인데 러럽이 조금 바람 뿡뿡 소리같음 부붕 덥~ 바람 볼록 튀어나오는 소리 같다고 할까.",
+      "audio_file_number": 25
+    },
+    {
+      "problem_number": 11,
+      "sound_name": "Midsystolic Click",
+      "sound_description": "뚜따뚜/뚜따뚜/뚜따뚜 중간에 한번 높아짐, Mid, Click 이니까 그렇겠지.... ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 12,
+      "sound_name": "Innocent systolic ejection murmur",
+      "sound_description": "구와아 춧/구와아 춧/구와아 춧. 뭔가 샥 굴리면서 끌고 지나가고 탈! 소리 남. 끄는? 긁는 소리는 약간 힘줘서 긁는데 마찰이 심하지는 않은 볼록한 소리.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 13,
+      "sound_name": "Aortic Stenosis Aortic Valvular stenosis murmur",
+      "sound_description": "구와아샷/구와아 /구와아찻. 수업시간에 들은 그 Aortic stenosis 소리 샤악! 샤악! 함 스피커로 바람을 뿜어내는 느낌둥샤탁 하는데 이와 비슷한 길이나 좀 더 길게 샤악~! ",
+      "audio_file_number": "32, 27"
+    },
+    {
+      "problem_number": 14,
+      "sound_name": "holosystolic mitral regurgitation",
+      "sound_description": "립덥 립덥 럽덥이랑 샤약 샤악 샤악 같이 들린다.....!! 샤악 샤악(Aortic에 비해 낮은 소리) 소리에 묻혀서 럽덥 럽던 소리가 잘 들리지 않음 이건 두쿵 탁 아니고 럽덥 소리는 규칙적인 듯한 느낌.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 15,
+      "sound_name": "Mitral valve prolapse murmur with click",
+      "sound_description": "두다둡 두다둡 두다둡 중간 중간 샥샥 소리 같이 들림.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 16,
+      "sound_name": "Aortic regurgitation early diastolic aortic regurgitation",
+      "sound_description": "듯 챠아아/듯 챠아아/듯 챠아아/듯 챠아아. 두 근하자마자 바로 샤악! 샤악 소리 꽤 높고 거슬릴 정도. 두 근!샤악! 샤악 소리는 비행기 소리 정도야.",
+      "audio_file_number": 38
+    },
+    {
+      "problem_number": 17,
+      "sound_name": "Graham Steell murmur",
+      "sound_description": "듯 촤아아/듯촤아아/듯 촤아아.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 18,
+      "sound_name": "Mitral stenosis - Atrial fibrillation",
+      "sound_description": "듯 구르르 듯 구르르 듯 구르르 두듯 불규칙한. 뭔가 구르릉~하는 소리 나는데 그거랑 더해서 무슨 북치는 것도 아니고 공기소리가 시끄럽게 같이 나.",
+      "audio_file_number": 42
+    },
+    {
+      "problem_number": 19,
+      "sound_name": "Mitral stenosis - Normal sinus",
+      "sound_description": "구르르르륵 / 구르르르륵 / 구르르르륵 / 구르르르륵 구르르르륵. 수업시간에 듣던 그 Mitral stenosis 럽 구르릉~럽 구르릉~ 돌굴러가우.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 20,
+      "sound_name": "Patent Ductus Arteriosus",
+      "sound_description": "구아아아아/구아아아아 / 구아아아아/구아아아 아. 비행기 지나갈게요~ 처음부터 끝까지 시끄럽게 높은 소리로 바람소리 날게요~ 계속.",
+      "audio_file_number": 46
+    },
+    {
+      "problem_number": 21,
+      "sound_name": "Pericardial Friction - rub",
+      "sound_description": "다뚜아뚜앗/다뚜앗뚜앗/다뚜앗뚜앗/다뚜앗뚜앗. 그 다급한 Continuous murmur 수업시간에 들었던 그것.",
+      "audio_file_number": 49
+    },
+    {
+      "problem_number": 22,
+      "sound_name": "Mediastinal – crunch",
+      "sound_description": "립덥 립덥 립덥 럽덥이랑 구지지지직 구지지지직 구지지지직 부서지는 소리 같이 부슨 부서지는 소리나 오돌토돌한 게 부서지는 소리 오돌토돌한 걸 꾹 누르고 지나가면서 으깨는 소리 같은 기분이야.",
+      "audio_file_number": 50
+    }
+  ],
+  "lung_sounds": [
+    {
+      "problem_number": 1,
+      "sound_name": "Normal trachea - Mainstem Bronchi",
+      "sound_description": "호오 하~/호오하~/호오하~/호오 하~  날카로운 그 숨 쉬는 바람 소리 맞으시네요. 어쩐지 익숙한 그런 기분.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 2,
+      "sound_name": "Bronchovesicular",
+      "sound_description": "훠어 하~/훠어 하~/훠어 하~/훠어 하~ 약간 바깥이랑 가깝고 얇은 동굴벽에 부딪히는 적은 바람소리 시끄럽지 않은 바람소리.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 3,
+      "sound_name": "Normal Breath - Over other chest wall area",
+      "sound_description": "후우 후~/후우후~ / 후우후~ / 후우후~  3:1? 2:1 정도로 앞소리가 길고 뒷소리가 짧은 느낌이고 뭐가 하나 막힌듯 소리가 맑지 못하고 약간 낮고 탁함. 벽 너머에서 듣는 느낌으로 소리가 작고 불확실함.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 4,
+      "sound_name": "Normal Breath - Midlung",
+      "sound_description": "후우후~/후우후~ / 후우후~ / 후우후~  아 세상에 윗소리랑 너무 비슷함 잠시만;;; ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 5,
+      "sound_name": "Normal Breath - Apex",
+      "sound_description": "후우후~/후우후~/후우후~/후우 후~~  3개 다 너무 비슷함. 이것도 앞소리가 길고 뒷소리가 짧음. 근데 뒷소리가 그냥 짧은 게 아니고 뭔가 내쉬어진다~는 느낌은 있음. 위에 것들보다 좀 더 날카로운 느낌으로 소리가 나지만 여전히 탁한 소리임. ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 6,
+      "sound_name": "Bronchophony - Normal",
+      "sound_description": "뿌부 뿌우우/뿌부 뿌우우/뿌부 뿌우우. 뭔데 당황스럽네. 뿌 푸 뿌우우웅~ 무슨 뭐지 폐소리가 맞는건지 의심스러울 정도로 당혹스러운 소리. 나름 리듬 타는 것 같기도? ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 7,
+      "sound_name": "Bronchophony - Consolidation",
+      "sound_description": "뿌빕 버어어/뿌빕버어어/뿌빕 버어어. 뿌우~뿌 뿌우웅~(뿌우웅은 음이 아래로 내려가는 느낌) 윗소리의 큰 소리 버전이랄까. 앞의 뿌~가 좀 더 길긴 함.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 8,
+      "sound_name": "Whispered Pectoriloquy - Normal",
+      "sound_description": "타타타 오/타타타오/타타타오 / 타타타 오. 쿠구 궁~세 파트로 나뉘어서 들리고... 소리가 좀 네모난 것 같기도 하고... 타타다옴~ ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 9,
+      "sound_name": "Whispered Pectoriloquy - Atelectasis",
+      "sound_description": "호오호호 / 호오호호 / 호오호 호. 이것도 세 파트로 나뉘어서 들리는데, 위에 것보다 소리가 확실히 얇고 가늘다. 윙윙위잉~ 그리고 날카로워 전 전자~/전전자~/전전자~ ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 10,
+      "sound_name": "Egophony - Normal",
+      "sound_description": "뿌우웅/뿌우웅/뿌우웅/뿌우웅/뿌우웅. 뿌웅~ 뿌웅~ 뿌웅~ 무슨 악기소리같네.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 11,
+      "sound_name": "Egophony - Tumor Pleural Effusion",
+      "sound_description": "삐요웅~/삐요웅~/삐요웅~  애오옹~  또잉입 또잉입~ 느낌은 약간 아파트 밑에서 가위~ 떡~ 파는 아저씨 확성기 소리 느낌 감성인데... ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 12,
+      "sound_name": "Coarse Crackles",
+      "sound_description": "구기기기긱 후~ / 구기기기긱 후~ / 구기기기긱 후~ 거칠고 (얘가 더 짧)→후(김). 뭔가 막 으깨다가 마지막에 바람 소리가 남. 마아아악 으깨 그러다가 무슨 뚫린 통로에 바람 부는 소리남. ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 13,
+      "sound_name": "Fine Crackles",
+      "sound_description": "후후후후후 히오~ / 후후후후후 히오~/후후후후후 히오~~  후(전체적으로). 이건 바람 소리가 메인으로 나고 자잘하게 뭔가 으깨지는 소리가 남. 슈슈슈슈슈 자자락 슈욱~ ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 14,
+      "sound_name": "Wheezes",
+      "sound_description": "후 히어어어어~ / 후 히어어어어~ / 후 히어어어어~  뭔데 외계인입니까? 바람소리가 나고 그 다음에 외계인이랑 통신하는 소리남. 슈우욱~ 또옹또옹또오옹 삐융~ 슈우우욱 삐웅 삐웅.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 15,
+      "sound_name": "Pleural Crackles",
+      "sound_description": "드ㄷㄷ 허~~ ㄷㄷㄷ / 허~~ /ㄷㄷㄷ허~~ ㄷㄷㄷ. 으깨고 바람 으깨고, 으깨지고 숨 들이쉬는 듯한 소리 나고 또 으깸.",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 16,
+      "sound_name": "Expiratory polyphonic Wheezes",
+      "sound_description": "다 허어어억/다 히어어어억 / 다 히어어어억. ④비오옹에서 낮은 을 같이. 이것도 wheezes랑 별 다를 바 없는데? 바람 소리가 나고 그 다음에 외계인이랑 통신하는 소리남. 위의 것과 비교해서 외계인과 통신 소리가 좀 탁한 것 같기도 하고.. 물에 잠긴 듯이... ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 17,
+      "sound_name": "Fixed monophonic Wheezes",
+      "sound_description": "후우우우우 히어/후우우우 히어/후우우우 히어 / 후우우우 히어. 바람 통신 바람. 바람소리 나고 삐웅~? 바람소리 이런 느낌이야 그게 한 세트로. ",
+      "audio_file_number": null
+    },
+    {
+      "problem_number": 18,
+      "sound_name": "Stridor",
+      "sound_description": "히이이 어후잇/히이이어 후잇. 후은 비움 후우. 외계인입니까 진심으로요. 이건 바람 소리고 뭐고 없음 처음부터 그냥 아기 외계인을 만나고 있는 기분이야. ",
+      "audio_file_number": null
+    }
+  ]
+}
