@@ -6,6 +6,7 @@ export function getFlashcards(category: SoundCategory, mode: FlashcardMode): Fla
     id: `${sound.id}-${mode}`,
     category,
     mode,
+    problemNumber: sound.problemNumber,
     name: sound.name,
     description: sound.description,
     audio: sound.audio,

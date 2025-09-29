@@ -2,7 +2,6 @@ import { getSounds } from "./sounds";
 import { shuffle } from "./random";
 import { QuizMode, QuizQuestion, SoundCategory, SoundItem } from "./types";
 
-const DEFAULT_QUESTION_COUNT = 10;
 const OPTION_COUNT = 4;
 
 function pickDistractors(pool: SoundItem[], correctId: string, count: number): SoundItem[] {
@@ -50,20 +49,16 @@ function buildQuestion(
 export function generateQuizQuestions(
   category: SoundCategory,
   mode: QuizMode,
-  count: number = DEFAULT_QUESTION_COUNT,
+  count?: number,
 ): QuizQuestion[] {
   const sounds = getSounds(category);
   if (sounds.length < OPTION_COUNT) {
     throw new Error("해당 분류에 대한 사운드 데이터가 충분하지 않습니다.");
   }
 
-  const order = shuffle(sounds);
-  const questions: QuizQuestion[] = [];
+  const shuffledSounds = shuffle(sounds);
+  const targetCount = count ? Math.min(count, sounds.length) : sounds.length;
+  const selection = shuffledSounds.slice(0, targetCount);
 
-  for (let i = 0; i < count; i += 1) {
-    const correct = order[i % order.length];
-    questions.push(buildQuestion(category, mode, i, correct, sounds));
-  }
-
-  return questions;
+  return selection.map((sound, index) => buildQuestion(category, mode, index, sound, sounds));
 }

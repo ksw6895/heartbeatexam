@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import AudioStack from "@/components/AudioStack";
 import { generateQuizQuestions } from "@/lib/quiz";
+import { shuffle } from "@/lib/random";
 import { SOUND_CATEGORIES, QuizMode, QuizQuestion, SoundCategory } from "@/lib/types";
 
 const CATEGORY_LABELS: Record<SoundCategory, string> = {
@@ -81,22 +82,15 @@ export default function QuizSection() {
   const [error, setError] = useState<string | null>(null);
 
   const currentQuestion = questions[currentIndex];
-  const completedAll = score.answered === questions.length && questions.length > 0;
+  const totalQuestions = questions.length;
+  const completedAll = score.answered === totalQuestions && totalQuestions > 0;
 
   const scoreRate = useMemo(() => {
     if (!score.answered) return 0;
     return Math.round((score.correct / score.answered) * 100);
   }, [score]);
 
-  useEffect(() => {
-    setQuestions([]);
-    setCurrentIndex(0);
-    setSelectedId(null);
-    setScore({ correct: 0, answered: 0 });
-    setError(null);
-  }, [category, mode]);
-
-  const handleGenerate = () => {
+  const regenerate = useCallback(() => {
     try {
       const generated = generateQuizQuestions(category, mode);
       setQuestions(generated);
@@ -105,10 +99,17 @@ export default function QuizSection() {
       setScore({ correct: 0, answered: 0 });
       setError(null);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "문제를 생성하지 못했습니다.");
       setQuestions([]);
+      setCurrentIndex(0);
+      setSelectedId(null);
+      setScore({ correct: 0, answered: 0 });
+      setError(err instanceof Error ? err.message : "문제를 생성하지 못했습니다.");
     }
-  };
+  }, [category, mode]);
+
+  useEffect(() => {
+    regenerate();
+  }, [regenerate]);
 
   const handleSelect = (optionId: string) => {
     if (!currentQuestion || selectedId) return;
@@ -121,80 +122,108 @@ export default function QuizSection() {
   };
 
   const handleNext = () => {
-    if (currentIndex < questions.length - 1) {
+    if (currentIndex < totalQuestions - 1) {
       setCurrentIndex((prev) => prev + 1);
       setSelectedId(null);
     }
   };
 
+  const handleShuffleAll = () => {
+    if (!questions.length) return;
+    setQuestions((prev) => {
+      const shuffled = shuffle(prev);
+      return shuffled.map((question, idx) => ({ ...question, id: `${question.id}__shuffled-${idx}` }));
+    });
+    setCurrentIndex(0);
+    setSelectedId(null);
+    setScore({ correct: 0, answered: 0 });
+  };
+
   return (
-    <section className="rounded-3xl bg-white/80 p-6 shadow-sm backdrop-blur">
+    <section className="flex flex-col gap-6">
       <header className="flex flex-col gap-2">
-        <h2 className="text-2xl font-semibold text-slate-900">4지선다 퀴즈</h2>
+        <h1 className="text-2xl font-semibold text-slate-900">4지선다 퀴즈</h1>
         <p className="text-sm text-slate-600">
-          분류와 문제 유형을 선택하고 10개의 문제를 즉시 생성하세요. 선택 즉시 해설이 노출됩니다.
+          분류와 유형을 선택하면 JSON 데이터에 포함된 모든 항목으로 문제가 생성됩니다. 해설은 보기를 고르는 즉시
+          확인할 수 있습니다.
         </p>
       </header>
 
-      <div className="mt-6 flex flex-wrap gap-2">
-        {SOUND_CATEGORIES.map((item) => (
-          <button
-            key={item}
-            type="button"
-            onClick={() => setCategory(item)}
-            className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
-              category === item
-                ? "border-slate-900 bg-slate-900 text-white"
-                : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
-            }`}
-          >
-            {CATEGORY_LABELS[item]}
-          </button>
-        ))}
-      </div>
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        {QUIZ_MODES.map((item) => (
-          <button
-            key={item.value}
-            type="button"
-            onClick={() => setMode(item.value)}
-            className={`rounded-full border px-4 py-2 text-xs sm:text-sm transition-colors ${
-              mode === item.value
-                ? "border-emerald-600 bg-emerald-600 text-white"
-                : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
-            }`}
-          >
-            <div className="font-medium">{item.label}</div>
-            <div className="hidden text-[11px] text-slate-500 sm:block">{item.helper}</div>
-          </button>
-        ))}
-      </div>
-
-      <div className="mt-6 flex flex-col gap-4 rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-4">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="text-sm text-slate-600">
-            정답 {score.correct} / {score.answered}
-            {score.answered > 0 && <span className="ml-2">({scoreRate}%)</span>}
+      <div className="rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-sm">
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-wrap gap-2">
+            {SOUND_CATEGORIES.map((item) => (
+              <button
+                key={item}
+                type="button"
+                onClick={() => setCategory(item)}
+                className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+                  category === item
+                    ? "border-slate-900 bg-slate-900 text-white"
+                    : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
+                }`}
+              >
+                {CATEGORY_LABELS[item]}
+              </button>
+            ))}
           </div>
-          <button
-            type="button"
-            onClick={handleGenerate}
-            className="rounded-full border border-emerald-600 bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500"
-          >
-            문제 생성하기
-          </button>
+
+          <div className="flex flex-wrap gap-2">
+            {QUIZ_MODES.map((item) => (
+              <button
+                key={item.value}
+                type="button"
+                onClick={() => setMode(item.value)}
+                className={`rounded-full border px-4 py-2 text-xs sm:text-sm transition-colors ${
+                  mode === item.value
+                    ? "border-emerald-600 bg-emerald-600 text-white"
+                    : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
+                }`}
+              >
+                <div className="font-medium">{item.label}</div>
+                <div className="hidden text-[11px] text-slate-500 sm:block">{item.helper}</div>
+              </button>
+            ))}
+          </div>
+
+          <div className="grid gap-3 rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-4 sm:grid-cols-[1fr_auto_auto] sm:items-center">
+            <div className="text-sm text-slate-600">
+              정답 {score.correct} / {score.answered}
+              {score.answered > 0 && <span className="ml-2">({scoreRate}%)</span>}
+              <span className="ml-2 text-slate-500">총 {totalQuestions}문제</span>
+            </div>
+            <button
+              type="button"
+              onClick={handleShuffleAll}
+              disabled={!questions.length}
+              className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+                questions.length
+                  ? "border-blue-600 bg-blue-600 text-white hover:bg-blue-500"
+                  : "cursor-not-allowed border-slate-200 bg-slate-100 text-slate-400"
+              }`}
+            >
+              전체 셔플
+            </button>
+            <button
+              type="button"
+              onClick={regenerate}
+              className="rounded-full border border-emerald-600 bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500"
+            >
+              새 문제 생성
+            </button>
+          </div>
+
+          {error && <p className="text-sm text-red-500">{error}</p>}
         </div>
-        {error && <p className="text-sm text-red-500">{error}</p>}
       </div>
 
       {currentQuestion ? (
-        <div className="mt-6 flex flex-col gap-4">
+        <div className="rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-sm">
           <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-inner">
             <div className="text-sm font-medium text-slate-500">
-              문제 {currentIndex + 1} / {questions.length}
+              문제 {currentIndex + 1} / {totalQuestions}
             </div>
-            <h3 className="mt-2 text-lg font-semibold text-slate-900">{currentQuestion.prompt}</h3>
+            <h2 className="mt-2 text-lg font-semibold text-slate-900">{currentQuestion.prompt}</h2>
             {currentQuestion.mode === "audio-to-name" && currentQuestion.promptAudio && (
               <div className="mt-4">
                 <AudioStack audio={currentQuestion.promptAudio} />
@@ -223,13 +252,13 @@ export default function QuizSection() {
             )}
           </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
             <button
               type="button"
               onClick={handleNext}
-              disabled={!selectedId || currentIndex >= questions.length - 1}
+              disabled={!selectedId || currentIndex >= totalQuestions - 1}
               className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
-                currentIndex >= questions.length - 1
+                currentIndex >= totalQuestions - 1
                   ? "cursor-not-allowed border-slate-200 bg-slate-100 text-slate-400"
                   : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
               }`}
@@ -244,7 +273,9 @@ export default function QuizSection() {
           </div>
         </div>
       ) : (
-        <p className="mt-6 text-sm text-slate-600">문제를 생성하면 이곳에서 바로 풀 수 있습니다.</p>
+        <div className="rounded-3xl border border-slate-200 bg-white/90 p-6 text-sm text-slate-600">
+          문제를 불러오는 중이거나 생성할 수 없습니다.
+        </div>
       )}
     </section>
   );

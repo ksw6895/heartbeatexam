@@ -15,6 +15,7 @@ export interface FlashcardItem {
   id: string;
   category: SoundCategory;
   mode: FlashcardMode;
+  problemNumber: string;
   name: string;
   description: string;
   audio: string[];
